@@ -26,7 +26,10 @@ class SatelliteEnginerringOperation:
     def __init__(self, *args, **kwargs):
         self.todayDate = date.today()
         seo = SatelliteEnginerringOperation
-        self.prediction = pd.read_csv(seo.base_dirs / "configuration/eclipse_prediction_from_2009_2032_complete.csv")
+        self.prediction = pd.read_csv(
+            seo.base_dirs
+            / "configuration/eclipse_prediction_from_2009_2032_complete.csv"
+        )
 
     def loadingPage(self, satId, launch):
         predict = self.prediction
